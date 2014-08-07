@@ -149,7 +149,7 @@ TEMPLATE_LOADERS = (
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#template-dirs
-TEMPLATE_DIRS = (
+TEMPLATE_DIRS = (    
     normpath(join(SITE_ROOT, 'templates')),
 )
 ########## END TEMPLATE CONFIGURATION
@@ -201,6 +201,7 @@ LOCAL_APPS = (
     'timeline',
     'scraper',
     'generador',
+    'mensajes',
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -289,7 +290,7 @@ SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
 #para envio de correo master a un server
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'jimialex06@gmail.com'
-EMAIL_HOST_PASSWORD = 'cca061187'
+EMAIL_HOST_USER = 'proyecto.sia.py@gmail.com'
+EMAIL_HOST_PASSWORD = 'appfucksia'
 EMAIL_USE_TLS = True
 

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{% static "css/mensajes.css" %}">
+{% endblock %}
+
+{% include "menu.html" %}
+
+{% block section %}
+{% include "menu.html" %}
+	<section class="card">
+		{% if info_enviado %}
+		<br><br>
+			Tu mensaje ha sido enviado correctamente! <br><br>
+			Gracias por contribuir con tu comentario, ten por seguro que lo tomaremos en cuenta.<br><br>
+			Estaremos en contato contigo :)<br><br>
+		<br><br>
+		{% else %}
+			<br>
+			Si tienes alguna sugerencia o comentario de la app solo envianos un mensaje aqui abajo<br><br>
+			<form action="." method="POST">
+			{% csrf_token %}
+				{{form.as_p}}
+				<input type="submit" value="Enviar"/>
+			</form>
+		{% endif %}
+		<br>
+	</section>
+
+{% endblock %}

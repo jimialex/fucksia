@@ -9,6 +9,7 @@ urlpatterns = patterns('',
     url(r'', include('scraper.urls')),
     url(r'', include('generador.urls')),
     url(r'', include('materias.urls')),
+    url(r'^mensajes/', include('mensajes.urls')),
     url('', include('social.apps.django_app.urls', namespace='social')),
     url(r'^admin/', include(admin.site.urls)),
 )
